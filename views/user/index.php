@@ -32,7 +32,8 @@
                 },
                 'filter' => $searchModel->getOnlineLabelList(),
                 'attribute' => 'is_online',
-                'format' => 'html'
+                'format' => 'html',
+                'visible' => !Yii::$app->user->isGuest,
             ],
             [
                 'class' => 'yii\grid\ActionColumn',
